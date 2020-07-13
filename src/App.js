@@ -13,7 +13,6 @@ import Search from './components/search/Search';
 import NotFound from './components/errors/NotFound';
 
 class App extends React.Component {
-  // Prevent page reload, clear input, set URL and push history on submit
   handleSubmit = (e, history, searchInput) => {
     e.preventDefault();
     e.currentTarget.reset();
@@ -23,7 +22,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <HashRouter basename="/SnapPicture">
+      <HashRouter >
         <div className="container">
           <Route render={props => <Header handleSubmit={this.handleSubmit} history={props.history} />} />
           <Switch>

@@ -115,6 +115,9 @@ input {
   display: flex;
   align-items: center;
 }
+.likes:hover{
+  cursor: pointer;
+}
 .description{
   display: flex;
   justify-content: space-around;
@@ -171,10 +174,20 @@ input {
   color: #fff;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.h1-custom:hover{
+  cursor: pointer;
+  color: #5f7d95;
+}
 
 .header{
   padding-bottom: 0.67em;
   background: #0b2239;
+}
+
+.logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @media only screen and (max-width: 767px)  {

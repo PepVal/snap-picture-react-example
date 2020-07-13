@@ -1,39 +1,33 @@
 import React from 'react';
+
+//components
 import NoImages from '../errors/NoImages';
 import Image from './Image';
 
+class Gallery extends React.Component{
+  render(){
 
-const Gallery = (props) => {
-  const results = props.data;
-  let images;
-  let noImages;
-
-// map variables
-  if (results.length > 0) {
-    images = results.map(image => {
-      let id = image.id;
-      let webformatURL = image.webformatURL;
-      let tags = image.tags;
-      let likes = image.likes;
-      let user = image.user;
-      let downloads = image.downloads;
-
-      return <Image url={webformatURL} key={id} alt={tags} likes={likes} user_name={user} downloads={downloads} />
-    });
-  } else {
-    noImages = <NoImages />   // return 'not found' component if no images fetched
+    const results = this.props.data; 
+    
+    return(<>
+      <div>
+        <ul>
+          { results.length > 0 
+            ? results.map((item, i) => {
+                return(
+                  <Image image={item} key={i}/>
+                )
+              })
+            : null
+          }
+        </ul>
+        { results.length == 0
+          ? <NoImages />
+          : null
+        }
+      </div>
+    </>)
   }
-
-  return (
-    <div>
-      <ul>
-        { images }
-      </ul>
-      { noImages }
-    </div>
-  );
-};
-
-
+}
 
 export default Gallery;

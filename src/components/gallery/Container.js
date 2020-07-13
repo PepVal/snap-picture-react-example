@@ -3,7 +3,6 @@ import axios from 'axios';
 import { apiKey } from '../../api/config';
 
 // import app components
-
 import Gallery from './Gallery';
 import Loader from './Loader';
 
@@ -41,11 +40,9 @@ class Container extends React.Component {
         });
       })
       .catch(error => {
-        console.log('Encountered an error with fetching and parsing data', error);
+        console.log('We have an error with fetching and parsing data', error);
       });
   }
-
-
 
   render() {
     return (
