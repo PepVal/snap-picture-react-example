@@ -54,6 +54,20 @@ a {
   fill: #edeff0;
   font-weight: bold;
 }
+.search-button2{
+  outline: none;
+  background-color: #0000;
+  fill: #fff;
+  border: none;
+  padding: 0px 15px;
+  border-radius: 0.35em 0.35em 0.35em 0.35em;
+  cursor: pointer;
+}
+.search-button2:hover{
+  background-color: red;
+  fill: #edeff0;
+  font-weight: bold;
+}
 input {
   font-size: 1em;
   width: 100%;
