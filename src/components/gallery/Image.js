@@ -6,7 +6,7 @@ class Image extends React.Component {
     super(props)
     this.state = {
       isHigh: false, 
-      colorStar: true,
+      colorStar: false,
     }
   }
 
@@ -15,7 +15,13 @@ class Image extends React.Component {
   }
 
   handleColorStar() {
-    this.setState({colorStar: !this.state.colorStar})
+    if(!this.state.colorStar){
+      this.setState({colorStar: true})
+      this.props.image.likes++
+    }else{
+      this.setState({colorStar: false})
+      this.props.image.likes--
+    }
   }
 
   render(){
